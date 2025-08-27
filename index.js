@@ -2,7 +2,7 @@ import { createServer } from "http";
 import { Server } from "socket.io";
 import { v4 as uuidv4 } from 'uuid';
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const httpServer = createServer(); // Create a standard HTTP server
 
 const io = new Server(httpServer, {
